@@ -1,7 +1,12 @@
 import pandas as pd
 
 # Load the original dataset
-df = pd.read_csv("../Data/Palo Alto Networks.csv")
+
+from pathlib import Path
+SCRIPT_DIR = Path(__file__).resolve().parent
+INPUT_FILE = SCRIPT_DIR / "Palo Alto Networks.csv"
+
+df = pd.read_csv(INPUT_FILE)
 
 # Basic dataset inspection
 print("Dataset Shape:", df.shape)
