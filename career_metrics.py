@@ -9,13 +9,11 @@ from sklearn.metrics import silhouette_score, adjusted_rand_score
 
 # Project folder paths
 SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_DIR = SCRIPT_DIR.parent
-
-DATA_DIR = PROJECT_DIR / "Data"
+PROJECT_DIR = SCRIPT_DIR
+DATA_DIR = PROJECT_DIR
 OUTPUT_DIR = PROJECT_DIR / "Output"
 
 INPUT_FILE = DATA_DIR / "Palo Alto Networks.csv"
-
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Required dataset columns
